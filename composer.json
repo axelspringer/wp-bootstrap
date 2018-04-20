@@ -1,0 +1,20 @@
+{
+  "name": "axelspringer/wp-framework",
+  "type": "wordpress-plugin",
+  "description": "A simple pluggable framework for WordPress plugins",
+  "keywords": [
+    "plugin",
+    "wordpress",
+    "framework"
+  ],
+  "autoload": {
+    "psr-4": {
+      "AxelSpringer\\WP\\Bootstrap\\": "src/"
+    }
+  },
+  "homepage": "https://github.com/axelspringer/wp-bootstrap",
+  "license": "Apache-2.0",
+  "require": {
+    "composer/installers": "~1.0.6"
+  }
+}
