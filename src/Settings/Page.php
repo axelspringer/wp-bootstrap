@@ -10,7 +10,7 @@ class Page {
 
   public static function render( $name, $title, $version, $callback ) {
 		?>
-		<div class="wrap asse-settings-page">
+		<div class="wrap bootstrap-settings-page">
 			<h2><span class='hidden-xs'><?= esc_html($title) ?></span></h2>
 			<form action="options.php" method="post">
 			<?php
@@ -57,7 +57,7 @@ class Page {
 									if ( $section['callback'] )
 										call_user_func( $section['callback'], $section );
 
-									do_action("asse_settings_section_" . $section['id']);
+									do_action("bootstrap_settings_section_" . $section['id']);
 
 									if ( ! isset( $wp_settings_fields ) || !isset( $wp_settings_fields[$page] ) || !isset( $wp_settings_fields[$page][$section['id']] ) ) {
 										echo '</div>';

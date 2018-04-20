@@ -8,10 +8,10 @@ class Section {
 
 	public function __construct( $args ) {
 		$defaults = array(
-			'id'			    => NULL,
+			'id'			  => NULL,
 			'title'			  => NULL,
 			'page'			  => NULL,
-			'description'	=> NULL,
+			'description'	  => NULL,
 			'icon'			  => NULL
 		);
 		$args = wp_parse_args( $args, $defaults );

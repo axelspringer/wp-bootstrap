@@ -29,7 +29,29 @@ abstract class AbstractSettings {
       $this->callback = function() {};
     }
 
+    $this->init();
+  }
+
+  public function init()
+  {
+    $this->load_hooks();
+  }
+
+  public function load_hooks()
+  {
+    $this->load_actions();
+    $this->load_filters();
+  }
+
+  public function load_actions()
+  {
     add_action(	'admin_menu', array( &$this, 'admin_menu' ) );
+    add_action( 'admin_init', array( &$this, 'load_settings' ) );
+  }
+
+  public function load_filters()
+  {
+
   }
 
   public function settings_page() {
@@ -39,4 +61,6 @@ abstract class AbstractSettings {
   public function admin_menu() {
     add_options_page( $this->title, $this->menu, $this->permission, $this->page, array( &$this, 'settings_page' ) );
   }
+
+  abstract public function load_settings();
 }

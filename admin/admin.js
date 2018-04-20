@@ -1,9 +1,9 @@
-var asseSettingsNavCtrl = function(){
+var bootstrapSettingsNavCtrl = function(){
 	var $ = jQuery;
 
 	this.init = function(){
 		var that = this;
-		$(".asse-settings-page").each(function(){
+		$(".bootstrap-settings-page").each(function(){
 			var $container = $(this);
 
 			// find the first active item
@@ -29,7 +29,7 @@ var asseSettingsNavCtrl = function(){
 	this.init();
 }
 
-var asseSettingsMultiCtrl = function(){
+var bootstrapSettingsMultiCtrl = function(){
 	var $ = jQuery;
 
 	this.init = function(){
@@ -62,8 +62,8 @@ var asseSettingsMultiCtrl = function(){
 }
 
 jQuery(document).ready(function($){
-	var settings_nav_ctrl = new asseSettingsNavCtrl();
-	var settings_multi_ctrl = new asseSettingsMultiCtrl();
+	var settings_nav_ctrl = new bootstrapSettingsNavCtrl();
+	var settings_multi_ctrl = new bootstrapSettingsMultiCtrl();
 	var wp = window.wp;
 
 });

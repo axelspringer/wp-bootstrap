@@ -36,6 +36,9 @@ abstract class AbstractPlugin {
 
         // after init
         $this->after_init();
+
+        // enqueue scripts
+        $this->enqueue_scripts();
     }
 
     /**
@@ -46,7 +49,7 @@ abstract class AbstractPlugin {
      */
     public function plugin_url( string $path )
     {
-        return plugins_url( $path, $this->file );
+        return plugins_url( $path, $this->setup->file );
     }
 
     abstract protected function init();

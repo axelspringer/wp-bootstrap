@@ -85,10 +85,11 @@ class Plugin extends AbstractPlugin
      *
      * @return
      */
-	public function enqueue_admin_scripts() {
+    public function enqueue_admin_scripts()
+    {
         // these can be used across plugins
 		wp_register_style( 'bootstrap-admin-style', $this->plugin_url( 'admin/admin.css' ), false, $this->setup->version );
-		wp_register_script( 'bootstrap-admin-script' , $this->plugin_url( 'admin/admin.css' ), array( 'jquery', 'wp-util'), $this->setup->version, true );
+		wp_register_script( 'bootstrap-admin-script' , $this->plugin_url( 'admin/admin.js' ), array( 'jquery', 'wp-util'), $this->setup->version, true );
 
 		wp_enqueue_style( 'bootstrap-admin-style' );
 		wp_enqueue_script( 'bootstrap-admin-script' );

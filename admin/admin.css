@@ -3716,47 +3716,47 @@
   clip: auto
 }
 
-.asse-settings-page * {
+.bootstrap-settings-page * {
   box-sizing: border-box
 }
 
-.asse-settings-page h2 {
+.bootstrap-settings-page h2 {
   font-size: 2em
 }
 
-.asse-settings-page .settings-container {
+.bootstrap-settings-page .settings-container {
   margin: 30px 0;
   background: #fff;
   border: 1px solid #e5e5e5;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1)
 }
 
-.asse-settings-page .container-row {
+.bootstrap-settings-page .container-row {
   display: flex;
   flex-flow: row wrap
 }
 
-.asse-settings-page .navigation-container {
+.bootstrap-settings-page .navigation-container {
   flex: 0 0 auto;
   padding: 0;
   background: #f2f2f2;
   border-right: 1px solid #e5e5e5
 }
 
-.asse-settings-page .content-container {
+.bootstrap-settings-page .content-container {
   flex: 0 0 auto
 }
 
-.asse-settings-page .navigation {
+.bootstrap-settings-page .navigation {
   margin: 0;
   display: flex
 }
 
-.asse-settings-page .navigation .nav-item {
+.bootstrap-settings-page .navigation .nav-item {
   margin: 0
 }
 
-.asse-settings-page .navigation .nav-item a {
+.bootstrap-settings-page .navigation .nav-item a {
   background: #f2f2f2;
   display: block;
   padding: 15px;
@@ -3769,18 +3769,18 @@
   border-bottom: 1px solid #f2f2f2
 }
 
-.asse-settings-page .navigation .nav-item a:focus {
+.bootstrap-settings-page .navigation .nav-item a:focus {
   box-shadow: none
 }
 
-.asse-settings-page .navigation .nav-item a:hover {
+.bootstrap-settings-page .navigation .nav-item a:hover {
   background: #21759b;
   color: #fff;
   border-top: 1px solid #21759b;
   border-bottom: 1px solid #21759b
 }
 
-.asse-settings-page .navigation .nav-item.active a {
+.bootstrap-settings-page .navigation .nav-item.active a {
   color: #21759b;
   background: #fff;
   margin-right: -1px;
@@ -3788,25 +3788,25 @@
   border-bottom: 1px solid #e5e5e5
 }
 
-.asse-settings-page .navigation .nav-item.active a:hover {
+.bootstrap-settings-page .navigation .nav-item.active a:hover {
   background: #21759b;
   color: #fff
 }
 
-.asse-settings-page .navigation .nav-item:first-child.active a {
+.bootstrap-settings-page .navigation .nav-item:first-child.active a {
   border-top: 1px solid #fff
 }
 
-.asse-settings-page .section a.fa {
+.bootstrap-settings-page .section a.fa {
   color: inherit;
   text-decoration: none
 }
 
-.asse-settings-page .section {
+.bootstrap-settings-page .section {
   margin: 0 0 60px
 }
 
-.asse-settings-page .credits-container {
+.bootstrap-settings-page .credits-container {
   margin: 30px 0;
   background: #fff;
   border: 1px solid #e5e5e5;
@@ -3815,38 +3815,38 @@
   color: #636363
 }
 
-.asse-settings-page .credits-container .credits {
+.bootstrap-settings-page .credits-container .credits {
   text-align: right
 }
 
-.asse-settings-page .credits-container a {
+.bootstrap-settings-page .credits-container a {
   text-decoration: none
 }
 
-.asse-settings-page fieldset.multi .multi-input .add-input, .asse-settings-page fieldset.multi .multi-input .remove-input {
+.bootstrap-settings-page fieldset.multi .multi-input .add-input, .bootstrap-settings-page fieldset.multi .multi-input .remove-input {
   display: none;
   cursor: pointer;
   color: #999
 }
 
-.asse-settings-page fieldset.multi .multi-input .add-input:hover, .asse-settings-page fieldset.multi .multi-input .remove-input:hover {
+.bootstrap-settings-page fieldset.multi .multi-input .add-input:hover, .bootstrap-settings-page fieldset.multi .multi-input .remove-input:hover {
   color: #21759b
 }
 
-.asse-settings-page fieldset.multi .multi-input:last-of-type .add-input, .asse-settings-page fieldset.multi .multi-input:last-of-type .remove-input {
+.bootstrap-settings-page fieldset.multi .multi-input:last-of-type .add-input, .bootstrap-settings-page fieldset.multi .multi-input:last-of-type .remove-input {
   display: inline
 }
 
-.asse-settings-page fieldset.multi .multi-input:first-of-type .remove-input {
+.bootstrap-settings-page fieldset.multi .multi-input:first-of-type .remove-input {
   display: none
 }
 
 @media (min-width:768px) {
-  .asse-settings-page .navigation {
+  .bootstrap-settings-page .navigation {
     margin: 0;
     display: block
   }
-  .asse-settings-page .navigation .nav-item .fa {
+  .bootstrap-settings-page .navigation .nav-item .fa {
     display: inline-block;
     min-width: 20px
   }
