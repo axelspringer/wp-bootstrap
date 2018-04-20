@@ -9,4 +9,5 @@ abstract class __PLUGIN__
 
     const TEXT_DOMAIN   = 'bootstrap';
     const SETTINGS_PAGE = 'bootstrap_settings_page';
+    const SETTINGS_PERMISSION = 'manage_options';
 }

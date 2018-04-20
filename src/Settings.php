@@ -1,13 +1,16 @@
 <?php
 
-namespace AxelSpringer\WP\Bootstrap\Settings;
+namespace AxelSpringer\WP\Bootstrap;
+
+use AxelSpringer\WP\Bootstrap\Settings\AbstractSettings;
+use AxelSpringer\WP\Bootstrap\Settings\Page;
 
 /**
  * Class Settings
  *
  * @package AxelSpringer\WP\Bootstrap
  */
-class Settings {
+class Settings extends AbstractSettings {
   public $page;
   public $permission;
   public $title;

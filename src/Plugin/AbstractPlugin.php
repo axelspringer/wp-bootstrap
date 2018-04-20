@@ -30,7 +30,6 @@ abstract class AbstractPlugin {
     public function __construct( string $slug = null, string $version = null, string $file )
     {
         $this->setup = new Setup( $slug, $version, $file ); // use configured setup
-        $this->settings = new Settings();
 
         // call to
         $this->init();

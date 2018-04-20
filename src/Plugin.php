@@ -19,6 +19,15 @@ class Plugin extends AbstractPlugin
     {
         // load options
         $this->setup->load_options( 'AxelSpringer\WP\Bootstrap\__OPTION__' );
+        $this->settings = new Settings(
+            __( __TRANSLATE__::SETTINGS_PAGE_TITLE ),
+            __( __TRANSLATE__::SETTINGS_MENU_TITLE ),
+            __PLUGIN__::SETTINGS_PAGE,
+            __PLUGIN__::SETTINGS_PERMISSION,
+            $this->setup->version
+        );
+
+        // $title, $menu, $page, $permission, $version, $options = null, $callback = null
     }
 
     /**
