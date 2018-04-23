@@ -1,11 +1,12 @@
 {
-  "name": "axelspringer/wp-framework",
+  "name": "axelspringer/wp-bootstrap",
   "type": "wordpress-plugin",
   "description": "A simple pluggable framework for WordPress plugins",
   "keywords": [
     "plugin",
     "wordpress",
-    "framework"
+    "framework",
+    "bootstrap"
   ],
   "autoload": {
     "psr-4": {
