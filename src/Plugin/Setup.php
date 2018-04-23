@@ -64,8 +64,8 @@ class Setup implements SetupInterface
         $options = $reflect->getConstants();
 
         // iterate needed params
-        foreach ( $options as $option => $id ) {
-            $this->options[ strtolower( $id ) ] = get_option( $option );
+        foreach ( $options as $option => $default ) {
+            $this->options[ strtolower( $option ) ] = get_option( strtolower( $option ) ) || $default;
         }
     }
 
