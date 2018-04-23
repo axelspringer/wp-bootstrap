@@ -47,6 +47,9 @@ class Setup implements SetupInterface
         $this->version = $version;
         $this->slug = $slug;
         $this->file = $file;
+
+        // update version
+        $this->update_version();
     }
 
     /**
@@ -60,9 +63,11 @@ class Setup implements SetupInterface
         $reflect = new \ReflectionClass( $options );
         $options = $reflect->getConstants();
 
+        var_dump($options);
+
         // iterate needed params
         foreach ( $options as $option => $id ) {
-            $this->options[ $id ] = get_option( $option );
+            $this->options[ strtolower( $id ) ] = get_option( $option );
         }
     }
 
@@ -73,8 +78,6 @@ class Setup implements SetupInterface
      */
     public function update_version()
     {
-        var_dump(plugins_url());
-
         $option = $this->slug . '_version';
         $old_version = get_option( $option );
 
