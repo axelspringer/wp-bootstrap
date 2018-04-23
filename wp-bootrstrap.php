@@ -31,12 +31,12 @@ if ( ! function_exists( 'add_action' ) ) {
 	exit;
 }
 
-// respect composer autoload
-$vendor_autoload_file =  __DIR__ . '/vendor/autoload.php';
-if ( file_exists( $vendor_autoload_file ) ) {
-	$loader = require_once $vendor_autoload_file;
-	$loader->addPsr4( 'AxelSpringer\\WP\\Bootstrap\\', __DIR__ . '/src' );
-}
+// do autoload of composer
+$loader =  require_once __DIR__ . '/vendor/autoload.php';
+$loader->addPsr4( 'AxelSpringer\\WP\\Bootstrap\\', __DIR__ . '/src' );
+
+// check if oop
+class_exists( '\AxelSpringer\WP\Bootstrap\Plugin' ) || exit;
 
 use \AxelSpringer\WP\Bootstrap\__WP__ as WP;
 use \AxelSpringer\WP\Bootstrap\__PLUGIN__ as Plugin;
