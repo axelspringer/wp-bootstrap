@@ -65,7 +65,7 @@ class Setup implements SetupInterface
 
         // iterate needed params
         foreach ( $options as $option => $default ) {
-            $this->options[ strtolower( $option ) ] = get_option( strtolower( $option ) ) || $default;
+            $this->options[ strtolower( $option ) ] = get_option( strtolower( $option ), $default );
         }
     }
 
