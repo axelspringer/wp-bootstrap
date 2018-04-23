@@ -9,7 +9,7 @@ We provide an OOP for WordPress plugins. There are classes to construct settings
 You can use the plugin and the bootstrap classes via
 
 ```
-compose require axelspringer/wp-bootstrap
+composer require axelspringer/wp-bootstrap:dev-master
 ```
 
 You do not have to necessarily enable the plugin to use the bootstrap code. But there is global shared helper `$wp_bootstrap` which provides many cool things.
