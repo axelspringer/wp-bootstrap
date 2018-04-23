@@ -32,14 +32,19 @@ if ( ! function_exists( 'add_action' ) ) {
 }
 
 // respect composer autoload
-$vendor_autoload_file =  __DIR__ . '/vendor/autoload.php';
-if ( file_exists( $vendor_autoload_file ) ) {
+if ( ! class_exists( 'AxelSpringer\WP\Bootstrap\Plugin' )
+    && file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
 	$loader = require_once $vendor_autoload_file;
 	$loader->addPsr4( 'AxelSpringer\\WP\\Bootstrap\\', __DIR__ . '/src' );
 }
 
+// if not composer, do autoloading
+if ( ! class_exists( 'AxelSpringer\WP\Bootstrap\Plugin' ) ) {
+    include_once __DIR__ . '/autoloader.php';
+}
+
 // check if oop
-class_exists( '\AxelSpringer\WP\Bootstrap\Plugin' ) || exit;
+// class_exists( '\AxelSpringer\WP\Bootstrap\Plugin' ) || exit;
 
 use \AxelSpringer\WP\Bootstrap\__WP__ as WP;
 use \AxelSpringer\WP\Bootstrap\__PLUGIN__ as Plugin;
