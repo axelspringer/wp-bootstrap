@@ -16,7 +16,7 @@ class Page {
 			<?php
 				global $wp_settings_sections, $wp_settings_fields;
 				settings_fields( $name );
-				$page = $name;
+                $page = $name;
 			?>
 			<div class="container-fluid settings-container">
 				<div class="row container-row">
@@ -57,7 +57,7 @@ class Page {
 									if ( $section['callback'] )
 										call_user_func( $section['callback'], $section );
 
-									do_action("bootstrap_settings_section_" . $section['id']);
+									do_action($section['id']);
 
 									if ( ! isset( $wp_settings_fields ) || !isset( $wp_settings_fields[$page] ) || !isset( $wp_settings_fields[$page][$section['id']] ) ) {
 										echo '</div>';

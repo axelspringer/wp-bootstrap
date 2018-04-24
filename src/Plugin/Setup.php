@@ -65,8 +65,29 @@ class Setup implements SetupInterface
 
         // iterate needed params
         foreach ( $options as $option => $default ) {
-            $this->options[ strtolower( $option ) ] = get_option( strtolower( $option ), $default );
+            $key = strtolower( $option ); //
+            $env = getenv( $option );
+            $this->options[ $key ] = get_option( $key, $default );
+            // overload env variables
+            $this->options[ $key ] = ! $env ? $this->options[ $key ] : $env;
         }
+    }
+
+    /**
+     * Check options
+     *
+     * @param array $options
+     * @return bool
+     */
+    public function check_options( $options = [] )
+    {
+        foreach( $options as $option ) {
+            if ( ! $option ) {
+                return false;
+            }
+        }
+
+        return true;
     }
 
     /**

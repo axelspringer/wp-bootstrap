@@ -25,6 +25,17 @@ class Settings extends AbstractSettings {
             'page'			  => $this->page,
             'description'	  => '',
         );
-        $bootstrap_general = new Section( $args );
+        $general = new Section( $args );
+
+        $args = array(
+            'id'				  => 'bootstrap_demo',
+            'title'				  => 'Demo',
+            'page'				  => $this->page,
+            'section'			  => 'bootstrap_general',
+            'description'         => '',
+            'type'				  => 'text', // text, textarea, password, checkbox
+            'multi'				  => false
+        );
+        $general_demo = new Field( $args );
     }
 }

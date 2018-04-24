@@ -17,5 +17,9 @@
   "license": "Apache-2.0",
   "require": {
     "composer/installers": "~1.0.6"
+  },
+  "scripts": {
+    "post-install-cmd": ["composer dump-autoload"],
+    "post-update-cmd": ["composer dump-autoload"]
   }
 }
