@@ -6,7 +6,7 @@
 
 namespace AxelSpringer\WP\Bootstrap\User;
 
-abstract class Capability
+abstract class Capabilities
 {
     const DELETE_OTHERS_PAGES   = 'delete_others_pages';
     const DELETE_OTHERS_POSTS   = 'delete_others_posts';

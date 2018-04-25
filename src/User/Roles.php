@@ -6,7 +6,7 @@
 
 namespace AxelSpringer\WP\Bootstrap\User;
 
-abstract class Role
+abstract class Roles
 {
     const EDITOR = [
         'delete_others_pages',
