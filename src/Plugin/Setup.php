@@ -55,9 +55,9 @@ class Setup implements SetupInterface
     /**
      * Load required options
      *
-     *
+     * @param string $options
      */
-    public function load_options( $options )
+    public function load_options( string $options )
     {
         // get constants
         $reflect = new \ReflectionClass( $options );

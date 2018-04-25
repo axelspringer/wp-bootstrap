@@ -26,8 +26,6 @@ class Plugin extends AbstractPlugin
             __PLUGIN__::SETTINGS_PERMISSION,
             $this->setup->version
         );
-
-        // $title, $menu, $page, $permission, $version, $options = null, $callback = null
     }
 
     /**
