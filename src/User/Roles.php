@@ -1,11 +1,11 @@
 <?php
-/**
- * Class PostStatus
- *
- */
 
 namespace AxelSpringer\WP\Bootstrap\User;
 
+/**
+ * Class Roles
+ *
+ */
 abstract class Roles
 {
     const EDITOR = [
