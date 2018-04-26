@@ -8,6 +8,10 @@ namespace AxelSpringer\WP\Bootstrap\User;
  */
 abstract class Roles
 {
+    // None
+    const NONE = [];
+
+    // Editor
     const EDITOR = [
         Capabilities::DELETE_OTHERS_PAGES => 1,
         Capabilities::DELETE_OTHERS_POSTS => 1,

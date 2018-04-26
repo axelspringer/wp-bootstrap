@@ -8,5 +8,6 @@ namespace AxelSpringer\WP\Bootstrap\User;
  */
 abstract class RoleName
 {
-    const EDITOR = 'Editor';
+    const NONE      = 'None';
+    const EDITOR    = 'Editor';
 }
