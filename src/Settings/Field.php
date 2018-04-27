@@ -52,12 +52,12 @@ class Field {
 					foreach(array_filter((array) get_option($this->args['id'])) as $value):
 				?>
 					<span class="multi-input">
-						<input type="text" placeholder="<?=esc_attr($this->args['placeholder'])?>" class="all-options" name="<?=$this->args['id']?>[]" id="<?=$this->args['id']?>" value="<?= esc_html(''.$value.''); ?>"> <span class="add-input fa fa-plus-square"></span> <span class="remove-input fa fa-minus-square"></span> <br /></span>
+						<input type="text" placeholder="<?= esc_attr($this->args['placeholder'])?>" class="all-options" name="<?=$this->args['id']?>[]" id="<?=$this->args['id']?>" value="<?= esc_html(''.$value.''); ?>"> <span class="add-input fa fa-plus-square"></span> <span class="remove-input fa fa-minus-square"></span> <br /></span>
 				<?php endforeach; ?>
 				<span class="multi-input">
-					<input type="text" placeholder="<?=esc_attr($this->args['placeholder'])?>" class="all-options" name="<?=$this->args['id']?>[]" id="<?=$this->args['id']?>"> <span class="add-input fa fa-plus-square"></span> <span class="remove-input fa fa-minus-square"></span> <br /></span>
+					<input type="text" placeholder="<?= esc_attr($this->args['placeholder'])?>" class="all-options" name="<?=$this->args['id']?>[]" id="<?=$this->args['id']?>"> <span class="add-input fa fa-plus-square"></span> <span class="remove-input fa fa-minus-square"></span> <br /></span>
 				<?php else: ?>
-					<input type="text" placeholder="<?=esc_attr($this->args['placeholder'])?>" class="all-options" name="<?=$this->args['id']?>" id="<?=$this->args['id']?>" value="<?= $this->args['disabled'] === true ? $this->args['disabled_default'] : get_option($this->args['id']) ?>" <?= disabled( $this->args['disabled'], true, false ); ?>>
+					<input type="text" placeholder="<?= esc_attr($this->args['placeholder'])?>" class="all-options" name="<?=$this->args['id']?>" id="<?=$this->args['id']?>" value="<?= $this->args['disabled'] === true ? $this->args['disabled_default'] : get_option($this->args['id']) ?>" <?= disabled( $this->args['disabled'], true, false ); ?>>
 				<?php endif; ?>
 				<p class="description">
 					<?php echo $this->args['description']; ?>
@@ -67,7 +67,7 @@ class Field {
 		elseif($t == "textarea"):
 		?>
 			<fieldset>
-				<textarea class="all-options" name="<?=$this->args['id']?>" id="<?=$this->args['id']?>"><?=get_option($this->args['id'])?></textarea>
+				<textarea class="all-options" name="<?=$this->args['id']?>" id="<?=$this->args['id']?>"><?= get_option($this->args['id'])?></textarea>
 				<p class="description">
 					<?php echo $this->args['description']; ?>
 				</p>
@@ -96,8 +96,8 @@ class Field {
 			<fieldset>
 				<?php
 				$args = array(
-					"name"				  => $this->args['id'],
-					"id"				    => $this->args['id'],
+					"name"				=> $this->args['id'],
+					"id"			    => $this->args['id'],
 					"selected"			=> get_option($this->args['id']),
 					"show_option_none"	=> __('Not selected'),
 				);
@@ -123,12 +123,12 @@ class Field {
           <option value="<?= $key ?>" <?= get_option($this->args['id']) === $key ? 'selected' : '' ?>><?= $value ?></option>
         <?php endforeach; ?>
 
-		<?php
-		elseif($t == "callback"):
+	<?php
+	elseif($t == "callback"):
 
-			call_user_func($this->args['callback'], $this->args);
+		call_user_func($this->args['callback'], $this->args);
 
-		endif;
+	endif;
 	}
 
 }
