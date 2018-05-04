@@ -11,7 +11,7 @@ class Page {
   public static function render( $name, $title, $version, $callback ) {
 		?>
 		<div class="wrap bootstrap-settings-page">
-			<h2><span class='hidden-xs'><?= esc_html($title) ?></span></h2>
+			<h2><span class='hidden-xs'><?php echo esc_html($title) ?></span></h2>
 			<form action="options.php" method="post">
 			<?php
 				global $wp_settings_sections, $wp_settings_fields;
@@ -85,7 +85,7 @@ class Page {
 			<div class="credits-container">
 				<div class="row">
 					<div class="col-xs-12">
-            Version <?= $version ?>
+            Version <?php echo  $version ?>
 					</div>
 				</div>
 			</div>

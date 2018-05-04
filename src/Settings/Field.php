@@ -52,12 +52,12 @@ class Field {
 					foreach(array_filter((array) get_option($this->args['id'])) as $value):
 				?>
 					<span class="multi-input">
-						<input type="text" placeholder="<?= esc_attr($this->args['placeholder'])?>" class="all-options" name="<?=$this->args['id']?>[]" id="<?=$this->args['id']?>" value="<?= esc_html(''.$value.''); ?>"> <span class="add-input fa fa-plus-square"></span> <span class="remove-input fa fa-minus-square"></span> <br /></span>
+						<input type="text" placeholder="<?php echo esc_attr($this->args['placeholder'])?>" class="all-options" name="<?php echo $this->args['id']?>[]" id="<?php echo $this->args['id']?>" value="<?php echo esc_html(''.$value.''); ?>"> <span class="add-input fa fa-plus-square"></span> <span class="remove-input fa fa-minus-square"></span> <br /></span>
 				<?php endforeach; ?>
 				<span class="multi-input">
-					<input type="text" placeholder="<?= esc_attr($this->args['placeholder'])?>" class="all-options" name="<?=$this->args['id']?>[]" id="<?=$this->args['id']?>"> <span class="add-input fa fa-plus-square"></span> <span class="remove-input fa fa-minus-square"></span> <br /></span>
+					<input type="text" placeholder="<?php echo esc_attr($this->args['placeholder'])?>" class="all-options" name="<?php echo $this->args['id']?>[]" id="<?php echo $this->args['id']?>"> <span class="add-input fa fa-plus-square"></span> <span class="remove-input fa fa-minus-square"></span> <br /></span>
 				<?php else: ?>
-					<input type="text" placeholder="<?= esc_attr($this->args['placeholder'])?>" class="all-options" name="<?=$this->args['id']?>" id="<?=$this->args['id']?>" value="<?= $this->args['disabled'] === true ? $this->args['disabled_default'] : get_option($this->args['id']) ?>" <?= disabled( $this->args['disabled'], true, false ); ?>>
+					<input type="text" placeholder="<?php echo esc_attr($this->args['placeholder'])?>" class="all-options" name="<?php echo $this->args['id']?>" id="<?php echo $this->args['id']?>" value="<?php echo $this->args['disabled'] === true ? $this->args['disabled_default'] : get_option($this->args['id']) ?>" <?php echo disabled( $this->args['disabled'], true, false ); ?>>
 				<?php endif; ?>
 				<p class="description">
 					<?php echo $this->args['description']; ?>
@@ -67,7 +67,7 @@ class Field {
 		elseif($t == "textarea"):
 		?>
 			<fieldset>
-				<textarea class="all-options" name="<?=$this->args['id']?>" id="<?=$this->args['id']?>"><?= get_option($this->args['id'])?></textarea>
+				<textarea class="all-options" name="<?php echo $this->args['id']?>" id="<?php echo $this->args['id']?>"><?php echo get_option($this->args['id'])?></textarea>
 				<p class="description">
 					<?php echo $this->args['description']; ?>
 				</p>
@@ -76,7 +76,7 @@ class Field {
 		elseif($t == "password"):
 		?>
 			<fieldset>
-				<input type="password" class="all-options" name="<?=$this->args['id']?>" id="<?=$this->args['id']?>" autocomplete="off" value="<?=get_option($this->args['id'])?>">
+				<input type="password" class="all-options" name="<?php echo $this->args['id']?>" id="<?php echo $this->args['id']?>" autocomplete="off" value="<?php echo get_option($this->args['id'])?>">
 				<p class="description">
 					<?php echo $this->args['description']; ?>
 				</p>
@@ -85,8 +85,8 @@ class Field {
 		elseif($t == "checkbox"):
 		?>
 			<fieldset>
-				<label for="<?=$this->args['id']?>">
-				<input type="checkbox" class="" name="<?=$this->args['id']?>" id="<?=$this->args['id']?>" autocomplete="off" value="1" <?php checked(get_option($this->args['id'])); ?>>
+				<label for="<?php echo $this->args['id']?>">
+				<input type="checkbox" class="" name="<?php echo $this->args['id']?>" id="<?php echo $this->args['id']?>" autocomplete="off" value="1" <?php checked(get_option($this->args['id'])); ?>>
 					<?php echo $this->args['description']; ?>
 				</label>
 			</fieldset>
@@ -118,9 +118,9 @@ class Field {
 					"show_option_none"	=> __('Not selected'),
 				);
         ?>
-        <select name="<?= $this->args['id'] ?>" id="<?= $this->args['id'] ?>" class="postform">
+        <select name="<?php echo  $this->args['id'] ?>" id="<?php echo $this->args['id'] ?>" class="postform">
         <?php foreach( $this->args['options'] as $key => $value ): ?>
-          <option value="<?= $key ?>" <?= get_option($this->args['id']) === $key ? 'selected' : '' ?>><?= $value ?></option>
+          <option value="<?php echo  $key ?>" <?php echo get_option($this->args['id']) === $key ? 'selected' : '' ?>><?php echo $value ?></option>
         <?php endforeach; ?>
 
 	<?php
